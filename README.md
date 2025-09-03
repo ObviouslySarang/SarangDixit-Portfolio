@@ -1,15 +1,17 @@
-# React Web Application
-
-A modern, responsive web application built with React, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio website showcasing my skills, projects, and experience as a Full Stack Developer.
 
 ## 🚀 Features
 
-- ⚡ Fast development with Vite
-- 🎨 Beautiful UI components with shadcn/ui
+- 💼 Professional portfolio showcase
+- 📱 Fully responsive design
+- ⚡ Fast performance with Vite
+- 🎨 Beautiful UI with shadcn/ui components
 - 🎯 Type-safe development with TypeScript
-- 📱 Responsive design with Tailwind CSS
 - 🌙 Dark/Light mode support
-- 🧩 Modular component architecture
+- 📧 Contact form with validation
+- 🚀 Smooth scrolling navigation
+- 📊 Skills and experience display
+- 🎯 Project showcase with live demos
 
 ## 🛠️ Technologies Used
 
