@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import profileImage from '@/assets/sarang-profile.jpg';
+import profileImage from '@/assets/sarang-linkedin-profile.jpg';
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -17,11 +17,11 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Profile Image */}
-          <div className="mb-8 animate-float">
+          <div className="mb-6 mt-8 animate-float">
             <img 
               src={profileImage} 
               alt="Sarang Dixit - AI & Data Science Engineer"
-              className="w-32 h-32 rounded-full mx-auto border-4 border-primary/30 glow-primary"
+              className="w-28 h-28 rounded-full mx-auto border-4 border-primary/30 glow-primary"
             />
           </div>
 
