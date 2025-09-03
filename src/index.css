@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,51 +8,51 @@
 
 @layer base {
   :root {
-    /* Dark Portfolio Theme */
-    --background: 222 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Professional Dark Theme */
+    --background: 217 33% 18%;        /* Deep Navy #1E293B */
+    --foreground: 210 40% 98%;        /* Cloud White #F8FAFC */
 
-    --card: 217 32.6% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 217 24% 27%;              /* Steel Gray #334155 */
+    --card-foreground: 210 40% 98%;   /* Cloud White #F8FAFC */
 
-    --popover: 217 32.6% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 217 24% 27%;           /* Steel Gray #334155 */
+    --popover-foreground: 210 40% 98%; /* Cloud White #F8FAFC */
 
-    /* Electric Blue Primary */
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 84% 4.9%;
+    /* Cool Blue Primary */
+    --primary: 217 91% 60%;           /* Cool Blue #2563EB */
+    --primary-foreground: 217 33% 18%; /* Deep Navy #1E293B */
     --primary-glow: 217 91% 70%;
 
-    /* Dark Secondary */
-    --secondary: 217 32.6% 12%;
-    --secondary-foreground: 210 40% 98%;
+    /* Steel Gray Secondary */
+    --secondary: 217 24% 27%;         /* Steel Gray #334155 */
+    --secondary-foreground: 210 40% 98%; /* Cloud White #F8FAFC */
 
-    --muted: 217 32.6% 15%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 24% 27%;             /* Steel Gray #334155 */
+    --muted-foreground: 214 32% 73%;  /* Soft Silver #CBD5E1 */
 
-    /* Neon Green Accent */
-    --accent: 186 100% 55%;
-    --accent-foreground: 222 84% 4.9%;
-    --accent-glow: 186 100% 65%;
+    /* Muted Indigo Accent */
+    --accent: 243 75% 59%;            /* Muted Indigo #4F46E5 */
+    --accent-foreground: 217 33% 18%; /* Deep Navy #1E293B */
+    --accent-glow: 243 75% 69%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 32.6% 15%;
-    --input: 217 32.6% 15%;
-    --ring: 217 91% 60%;
+    --border: 215 16% 67%;            /* Ash Gray #94A3B8 */
+    --input: 217 24% 27%;             /* Steel Gray #334155 */
+    --ring: 217 91% 60%;              /* Cool Blue #2563EB */
 
     --radius: 0.75rem;
 
     /* Custom Design Tokens */
-    --terminal-green: 120 100% 50%;
-    --warning-orange: 38 92% 50%;
-    --code-bg: 217 32.6% 6%;
+    --ash-gray: 215 16% 67%;          /* Ash Gray #94A3B8 */
+    --slate-blue: 217 91% 60%;        /* Slate Blue #3B82F6 (same as Cool Blue) */
+    --code-bg: 217 33% 15%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
-    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(217 32.6% 3%));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(217 33% 15%));
     
     /* Shadows */
     --shadow-glow: 0 0 20px hsl(var(--primary) / 0.3);
@@ -125,7 +125,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
     background: var(--gradient-dark);
   }
 }
