@@ -1,57 +1,71 @@
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, Clock, Users, Zap } from 'lucide-react';
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github, Clock, Users, Zap } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
       title: "Earthquake Alert Notification System",
       year: "2024",
-      description: "Built a real-time seismic alert system capable of sending SMS/email notifications within 3 seconds to over 500 users. Optimized backend performance by 40%.",
+      description:
+        "Built a real-time seismic alert system capable of sending SMS/email notifications within 3 seconds to over 500 users. Optimized backend performance by 40%.",
       techStack: ["Node.js", "React.js", "Twilio API", "SendGrid API"],
       features: [
         "Real-time alerts within 3 seconds",
         "500+ concurrent users",
-        "40% performance optimization"
+        "40% performance optimization",
       ],
-      status: "Live",
-      type: "Full Stack"
+      status: "Down",
+      type: "Full Stack",
+      githubLink: "#",
+      liveLink: "#",
     },
     {
       title: "Student Mentorship Program",
       year: "2024",
-      description: "Automated mentor-mentee pairings and improved feedback efficiency by 80%. Boosted user satisfaction by 25% through intelligent matching algorithms.",
+      description:
+        "Automated mentor-mentee pairings and improved feedback efficiency by 80%. Boosted user satisfaction by 25% through intelligent matching algorithms.",
       techStack: ["HTML", "CSS", "JavaScript", "Google Apps Script"],
       features: [
         "Automated mentor-mentee matching",
         "80% feedback efficiency boost",
-        "25% satisfaction improvement"
+        "25% satisfaction improvement",
       ],
       status: "Live",
-      type: "Web Application"
+      type: "Web Application",
+      githubLink:
+        "https://github.com/ObviouslySarang/Gcet_StudentMentorshipProgram",
+      liveLink: "#",
     },
     {
       title: "Athlosphere – Athlete Guidance Platform",
       year: "2023",
-      description: "Developed a secure athlete guidance platform with JWT authentication and protected API routes. Achieved 99.5% uptime and reduced frontend load time by 45%.",
+      description:
+        "Developed a secure athlete guidance platform with JWT authentication and protected API routes. Achieved 99.5% uptime and reduced frontend load time by 45%.",
       techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"],
       features: [
         "JWT Authentication",
         "99.5% uptime achieved",
-        "45% faster load times"
+        "45% faster load times",
       ],
       status: "Live",
-      type: "MERN Stack"
-    }
+      type: "MERN Stack",
+      githubLink: "https://github.com/ObviouslySarang/athlosphere",
+      liveLink: "#",
+    },
   ];
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status) => {
     switch (status) {
-      case 'Live':
-        return <div className="w-2 h-2 bg-terminal-green rounded-full animate-pulse"></div>;
-      case 'Development':
-        return <div className="w-2 h-2 bg-warning-orange rounded-full animate-pulse"></div>;
+      case "Live":
+        return (
+          <div className="w-2 h-2 bg-terminal-green rounded-full animate-pulse"></div>
+        );
+      case "Development":
+        return (
+          <div className="w-2 h-2 bg-warning-orange rounded-full animate-pulse"></div>
+        );
       default:
         return <div className="w-2 h-2 bg-muted-foreground rounded-full"></div>;
     }
@@ -67,14 +81,18 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
           <p className="text-muted-foreground mt-4 max-w-2xl">
-            A showcase of my recent work in full-stack development, API design, and data-driven solutions.
+            A showcase of my recent work in full-stack development, API design,
+            and data-driven solutions.
           </p>
         </div>
 
         {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-card/50 backdrop-blur-sm border-border hover-lift group">
+            <Card
+              key={index}
+              className="bg-card/50 backdrop-blur-sm border-border hover-lift group"
+            >
               <CardContent className="p-6">
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -102,7 +120,10 @@ const Projects = () => {
                 {/* Key Features */}
                 <div className="space-y-2 mb-4">
                   {project.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-2 text-xs">
+                    <div
+                      key={featureIndex}
+                      className="flex items-center gap-2 text-xs"
+                    >
                       <Zap className="h-3 w-3 text-accent" />
                       <span className="text-muted-foreground">{feature}</span>
                     </div>
@@ -112,7 +133,11 @@ const Projects = () => {
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.techStack.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="text-xs">
+                    <Badge
+                      key={techIndex}
+                      variant="secondary"
+                      className="text-xs"
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -121,13 +146,35 @@ const Projects = () => {
 
               <CardFooter className="p-6 pt-0">
                 <div className="flex gap-2 w-full">
-                  <Button variant="outline" size="sm" className="flex-1">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1"
+                    asChild
+                  >
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </a>
                   </Button>
-                  <Button variant="outline" size="sm" className="flex-1">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1"
+                    asChild
+                  >
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Live
+                    </a>
                   </Button>
                 </div>
               </CardFooter>
@@ -142,9 +189,18 @@ const Projects = () => {
             <p className="text-muted-foreground mb-4">
               Check out all my projects and contributions on GitHub
             </p>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary-glow glow-primary">
-              <Github className="h-4 w-4 mr-2" />
-              View All Projects
+            <Button
+              className="bg-primary text-primary-foreground hover:bg-primary-glow glow-primary"
+              asChild
+            >
+              <a
+                href="https://github.com/ObviouslySarang"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-4 w-4 mr-2" />
+                View All Projects
+              </a>
             </Button>
           </div>
         </div>
