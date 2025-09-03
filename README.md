@@ -69,62 +69,6 @@ yarn build
 
 The build artifacts will be stored in the `dist/` directory.
 
-## 🌐 Deployment
-
-### Deploy to Netlify
-
-1. **Build your project**
-   ```bash
-   npm run build
-   ```
-
-2. **Deploy via Netlify CLI** (recommended)
-   ```bash
-   # Install Netlify CLI globally
-   npm install -g netlify-cli
-
-   # Login to Netlify
-   netlify login
-
-   # Deploy to Netlify
-   netlify deploy --prod --dir=dist
-   ```
-
-3. **Or deploy via Netlify Web Interface**
-   - Go to [Netlify](https://app.netlify.com/)
-   - Drag and drop your `dist` folder
-   - Or connect your GitHub repository for automatic deployments
-
-### Deploy to Vercel
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel --prod
-```
-
-### Deploy to GitHub Pages
-
-1. Install gh-pages:
-   ```bash
-   npm install --save-dev gh-pages
-   ```
-
-2. Add to your package.json:
-   ```json
-   {
-     "scripts": {
-       "deploy": "npm run build && gh-pages -d dist"
-     }
-   }
-   ```
-
-3. Deploy:
-   ```bash
-   npm run deploy
-   ```
 
 ## 🏗️ Project Structure
 
