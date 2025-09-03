@@ -74,11 +74,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Status */}
-          <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border rounded-full px-4 py-2 font-mono text-sm animate-pulse-glow">
-            <div className="w-2 h-2 bg-terminal-green rounded-full animate-pulse"></div>
-            Currently working on <span className="text-accent font-semibold">Portfolio Projects</span>
-          </div>
         </div>
       </div>
 
